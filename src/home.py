@@ -11,7 +11,7 @@ def page_home():
     st.write(
         "Anime_CSV [link](https://github.com/Otherwa/CSVDash/blob/Otherwa/data/Anime_Analysis.csv)"
     )
-
+    
     st.title("UI Changes:")
     st.write("1. Updated the color scheme for a more modern look.")
     st.write("2. Reorganized the navigation menu for better user flow.")
