@@ -8,7 +8,6 @@ def page_home():
     # Define the Streamlit app title and a brief description
     st.title("CSVdash - Convert & Visualize CSV Data")
     st.write("Welcome to CSVdash, your tool for converting and visualizing CSV data!")
-
     st.write(
         "Anime_CSV [link](https://github.com/Otherwa/CSVDash/blob/Otherwa/data/Anime_Analysis.csv)"
     )
