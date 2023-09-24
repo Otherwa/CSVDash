@@ -6,6 +6,8 @@ Certainly! Here's a simple `readme.md` template for your Streamlit app that allo
 
 This Streamlit app is designed to help you analyze and visualize data from CSV files. It allows you to upload your own CSV data and generate various analytics, including mean, mode, standard deviation, and variance for selected columns.
 
+![csvdah](https://github.com/Otherwa/CSVDash/assets/67428572/eabb8f5d-d27e-49c8-91c2-03ffa992412e)
+
 ## Features
 
 - Upload your CSV data.
