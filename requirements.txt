@@ -1,2 +1,6 @@
 streamlit==1.24.1
 pandas>2.0
+st-annotated-text
+plotly
+numpy
+matplotlib

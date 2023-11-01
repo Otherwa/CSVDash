@@ -1,6 +1,6 @@
 # Custom dependencies
 from config.css import load_custom_css
-from src.sidebar import create_sidebar
+from src.components.sidebar import create_sidebar
 
 # pages
 from src.file import page_file
@@ -112,23 +112,6 @@ def main():
         else:
             st.error("File not Upload or Present")
 
-    elif page == "Download Data":
-        # Download data page
-        st.title("Download Data")
-        st.write("Select data to download:")
-
-        if uploaded_file is not None:
-            df = pd.read_csv(uploaded_file)
-
-            if st.button("Download Data"):
-                # Save the data to a file
-                data_csv = df.to_csv(index=False)
-                b64 = base64.b64encode(data_csv.encode()).decode()
-                href = f'<a href="data:file/csv;base64,{b64}" download="data.csv">Download CSV</a>'
-                st.markdown(href, unsafe_allow_html=True)
-        else:
-            st.error("File not Upload or Present")
-
 
 if __name__ == "__main__":
     st.set_option("deprecation.showfileUploaderEncoding", False)
@@ -136,4 +119,5 @@ if __name__ == "__main__":
         page_title="CSVDash",
         page_icon=":chart_with_upwards_trend:",
     )
+
     main()

@@ -8,7 +8,7 @@ def create_sidebar():
     st.sidebar.title("CSVDash")
     page = st.sidebar.selectbox(
         "Pages:",
-        ["Home", "File", "Convert Column", "Plot Graph", "Download Data"],
+        ["Home", "File", "Convert Column", "Plot Graph"],
     )
 
     # st.sidebar.image(
