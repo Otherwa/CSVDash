@@ -6,10 +6,7 @@ from datetime import datetime
 import streamlit as st
 
 # ? Custom Dependeinces
-from matplotlib import pyplot as plt
-import numpy as np
 import pandas as pd
-import plotly.express as px
 
 from src.modules.file.chart_gen import generate_charts
 
@@ -33,6 +30,7 @@ def page_file(uploaded_file):
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         if selected_tab == "Details":
+            # * generate charts
             generate_charts(df)
         elif selected_tab == "Data":
             # ? Display the DataFrame as a table
