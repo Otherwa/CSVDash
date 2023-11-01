@@ -1,6 +1,4 @@
-Certainly! Here's a simple `readme.md` template for your Streamlit app that allows users to upload a CSV file and generate analytics for it:
 
----
 
 # Streamlit CSV Analytics App
 
