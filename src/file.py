@@ -7,6 +7,17 @@ import streamlit as st
 
 # ? Custom Dependeinces
 import pandas as pd
+import plotly.express as px
+
+from src.modules.file.chart_gen import generate_charts
+
+
+def get_csv_download_link(df):
+    csv = df.to_csv(index=False)
+    b64 = base64.b64encode(csv.encode()).decode()
+    href = f'<a href="data:file/csv;base64,{b64}" download="modified_data.csv">Download CSV</a>'
+    return href
+
 
 from src.modules.file.chart_gen import generate_charts
 
