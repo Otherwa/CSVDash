@@ -3,3 +3,6 @@ streamlit-aggrid
 numpy
 matplotlib
 pandasai
+streamlit-elements
+streamlit-option-menu
+streamlit-pandas-profiling
