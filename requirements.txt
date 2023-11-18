@@ -106,7 +106,7 @@ preshed==3.0.9
 prompt-toolkit==3.0.41
 protobuf==4.24.3
 pure-eval==0.2.2
-pyarrow==13.0.0
+pyarrow==14.0.1
 pyasn1==0.5.0
 pyasn1-modules==0.3.0
 pydantic==1.10.13
