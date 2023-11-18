@@ -6,3 +6,4 @@ pandasai
 streamlit-elements
 streamlit-option-menu
 streamlit-pandas-profiling
+plotly
