@@ -99,7 +99,7 @@ pandasai==1.4.10
 parso==0.8.3
 patsy==0.5.3
 phik==0.12.3
-Pillow==9.5.0
+Pillow==10.0.1
 pipeline==0.1.0
 plotly==5.18.0
 preshed==3.0.9
