@@ -22,6 +22,6 @@ def SmartDataSet(df):
 def query_csv_transformers(df, user_question):
     pandas_ai = SmartDataSet(df)
     with st.spinner("Querying Data 🔍"):
-        st.write("Please Wait ⏳")
+        st.write("Please Wait ⏳ Generaly Takes a Little Time")
         response = pandas_ai.chat(user_question)
         st.success(response)
