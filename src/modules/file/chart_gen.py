@@ -19,8 +19,8 @@ def generate_charts(dataframe):
         selected_tab = "Details"
     # !
 
-    with st.status("Analyzing Data 🔍", expanded=True) as status:
-        st.write("Computing...")
+    with st.status("Analyzing Data 🔍", expanded=False) as status:
+        status.update(label="Computing...")
         time.sleep(1)
         if selected_tab == "Details":
             # Display the column headers
@@ -29,9 +29,9 @@ def generate_charts(dataframe):
             # Calculate statistical data for quantitative columns
             quantitative_columns = dataframe.select_dtypes(include=[float, int])
 
+            status.update(label="Generating Data Frame..")
             if not quantitative_columns.empty:
                 # Convert None values to 0
-                st.write("Generating Data Frame..")
                 time.sleep(2)
                 quantitative_columns = quantitative_columns.fillna(0)
 
@@ -58,7 +58,7 @@ def generate_charts(dataframe):
                         x=column,
                         title=f"Histogram for {column}",
                     )
-                    st.plotly_chart(fig_hist)
+                    st.plotly_chart(fig_hist,use_container_width=True)
 
                     # Create an interactive box plot using Plotly
                     fig_box = px.box(
@@ -66,7 +66,7 @@ def generate_charts(dataframe):
                         x=column,
                         title=f"Box Plot for {column}",
                     )
-                    st.plotly_chart(fig_box)
+                    st.plotly_chart(fig_box,use_container_width=True)
 
                     # 2x2
 
@@ -76,7 +76,7 @@ def generate_charts(dataframe):
                         title=f"Histogram for {column}",
                         width=500,
                     )
-                    st.plotly_chart(fig_hist)
+                    st.plotly_chart(fig_hist,use_container_width=True)
 
                     # Create an interactive box plot using Plotly
                     fig_box = px.box(
@@ -85,7 +85,7 @@ def generate_charts(dataframe):
                         title=f"Box Plot for {column}",
                         width=500,
                     )
-                    st.plotly_chart(fig_box)
+                    st.plotly_chart(fig_box,use_container_width=True)
 
                     # Create an interactive scatter plot using Plotly
                     fig_scatter = px.scatter(
@@ -95,7 +95,7 @@ def generate_charts(dataframe):
                         title=f"Scatter Plot for {column}",
                         width=500,
                     )
-                    st.plotly_chart(fig_scatter)
+                    st.plotly_chart(fig_scatter,use_container_width=True)
 
                     # Create an interactive violin plot using Plotly
                     fig_violin = px.violin(
@@ -104,7 +104,7 @@ def generate_charts(dataframe):
                         title=f"Violin Plot for {column}",
                         width=500,
                     )
-                    st.plotly_chart(fig_violin)
+                    st.plotly_chart(fig_violin,use_container_width=True)
 
                 status.update(label="Computed ✅", state="complete", expanded=True)
             else:
