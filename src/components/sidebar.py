@@ -10,30 +10,30 @@ def create_sidebar():
     with st.sidebar:
         st.sidebar.title("CSVDash")
 
-        styles = {
-            "nav-link": {
-                "font-size": "0.9rem",
-                "text-align": "left",
-                "margin": "0px",
-            },
-        }
+        # styles = {
+        #     "nav-link": {
+        #         "font-size": "0.9rem",
+        #         "text-align": "left",
+        #         "margin": "0px",
+        #     },
+        # }
 
-        page = option_menu(
-            None,
-            ["Home", "File", "Convert Column", "Plot Graph"],
-            icons=["house", "cloud-upload", "list-task", "gear"],
-            menu_icon="cast",
-            default_index=0,
-            styles=styles,
-        )
-        # page = st.sidebar.selectbox(
-        #     "Pages:",
+        # page = option_menu(
+        #     None,
         #     ["Home", "File", "Convert Column", "Plot Graph"],
+        #     icons=["house", "cloud-upload", "list-task", "gear"],
+        #     menu_icon="cast",
+        #     default_index=0,
+        #     styles=styles,
         # )
-
-    # st.sidebar.image(
-    #     "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8a97820c-3d54-44c5-bd33-224656c74360/d5a97ie-995eb26b-0e02-4b89-852d-fa1da79edd6b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhOTc4MjBjLTNkNTQtNDRjNS1iZDMzLTIyNDY1NmM3NDM2MFwvZDVhOTdpZS05OTVlYjI2Yi0wZTAyLTRiODktODUyZC1mYTFkYTc5ZWRkNmIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dReXRU3hJWw4Yr9Uk0RUqt0YnYuveewnjbCQiT9VbNE"
-    # )
+        st.sidebar.image(
+            "https://i.pinimg.com/originals/80/7b/5c/807b5c4b02e765bb4930b7c66662ef4b.gif",
+            width=100,
+        )
+        page = st.sidebar.selectbox(
+            "Pages:",
+            ["Home", "File"],
+        )
 
     # Create a sidebar for file upload and data conversion options
     uploaded_file = st.sidebar.file_uploader("Upload a CSV file", type=["csv"])

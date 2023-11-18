@@ -19,8 +19,8 @@ def generate_charts(dataframe):
         selected_tab = "Details"
     # !
 
-    with st.status("Analyzing Data 🔍", expanded=True) as status:
-        st.write("Computing...")
+    with st.status("Analyzing Data 🔍", expanded=False) as status:
+        status.update(label="Computing...")
         time.sleep(1)
         if selected_tab == "Details":
             # Display the column headers
@@ -29,9 +29,9 @@ def generate_charts(dataframe):
             # Calculate statistical data for quantitative columns
             quantitative_columns = dataframe.select_dtypes(include=[float, int])
 
+            status.update(label="Generating Data Frame..")
             if not quantitative_columns.empty:
                 # Convert None values to 0
-                st.write("Generating Data Frame..")
                 time.sleep(2)
                 quantitative_columns = quantitative_columns.fillna(0)
 
