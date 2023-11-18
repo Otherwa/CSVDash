@@ -1,0 +1,43 @@
+/* custom.css */
+
+/* Change the background color of the Streamlit app */
+body {
+    background-color: #f0f0f0;
+    /* Replace with your desired background color */
+}
+
+/* Change the text color */
+.stApp,
+section,
+header {
+    /* color: rgb(255, 255, 255);
+    background-color: black !important; */
+    /* Replace with your desired text color */
+}
+
+/* Change the color of the Streamlit header */
+.st-eb {
+    background-color: #007acc;
+    /* Replace with your desired header color */
+    color: #fff;
+    /* Replace with your desired header text color */
+}
+
+/* Add any other custom styling you need */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+/* custom */
+
+.reportview-container {
+    background-color: black;
+}
+
+.sidebar .sidebar-content {
+    background-color: black;
+}
