@@ -28,9 +28,9 @@ def main():
 
 if __name__ == "__main__":
     st.set_option("deprecation.showfileUploaderEncoding", False)
-    st.set_page_config(
-        page_title="CSVDash",
-        page_icon=":chart_with_upwards_trend:",
-    )
+    # st.set_page_config(
+    #     page_title="CSVDash",
+    #     page_icon=":chart_with_upwards_trend:",
+    # )
 
     main()

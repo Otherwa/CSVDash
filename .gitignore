@@ -163,4 +163,3 @@ cython_debug/
 .env
 Spacefile
 .space
-cache
