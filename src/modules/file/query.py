@@ -42,6 +42,5 @@ def query_csv_transformers(df, user_question):
         print(response)
         with st.status("Analyzing Data 🔍", expanded=False) as status:
             status.update(label="Computing...")
-            st.write(response) if response != None else st.write("") 
-            st.image('./temp_chart.png')
+            st.write(response)
             status.update(label="Computed ✅")
