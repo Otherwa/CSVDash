@@ -3,20 +3,10 @@ from dotenv import load_dotenv
 import os
 from pandasai import SmartDataframe
 from pandasai.llm.openai import OpenAI
-from pandasai.callbacks import BaseCallback
 from pandasai.responses.response_parser import ResponseParser
 import matplotlib.pyplot as plt
 
 load_dotenv()
-
-class StreamlitCallback(BaseCallback):
-    def __init__(self, container) -> None:
-        """Initialize callback handler."""
-        self.container = container
-
-    def on_code(self, response: str):
-        self.container.code(response)
-
 
 class StreamlitResponse(ResponseParser):
     def __init__(self, context) -> None:
