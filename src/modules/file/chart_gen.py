@@ -8,7 +8,6 @@ import time
 import plotly.express as px
 
 
-@st.cache_resource()
 def generate_charts(dataframe):
     with st.status("Analyzing Data 🔍", expanded=False) as status:
         status.update(label="Computing...")
