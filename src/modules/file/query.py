@@ -35,7 +35,16 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 def query_csv_transformers(df, user_question, api):
     llm = OpenAI(api_token=openai_api_key)
     if api:
-        pandas_ai = SmartDataframe(df, config={"llm": llm})
+        pandas_ai = SmartDataframe(
+            df,
+            config={
+                "llm": llm,
+                "save_charts": True,
+                "save_charts_path": r"./data/charts",
+            },
+        )
         response = pandas_ai.chat(user_question)
         print(response)
+        if response == None:
+            return {"answer": None}
         return {"answer": response}

@@ -162,4 +162,9 @@ cython_debug/
 # ? SPACE FILES
 .env
 Spacefile
+<<<<<<< HEAD
 .space
+cache
+=======
+.space
+>>>>>>> 46b94ef52bcb30a222ea766dbdf1197d14331d44
