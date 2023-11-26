@@ -12,6 +12,32 @@ matplotlib.use(backend="TkAgg")
 load_dotenv()
 
 
+class StreamlitCallback(BaseCallback):
+    def __init__(self, container) -> None:
+        """Initialize callback handler."""
+        self.container = container
+
+    def on_code(self, response: str):
+        self.container.code(response)
+
+
+class StreamlitResponse(ResponseParser):
+    def __init__(self, context) -> None:
+        super().__init__(context)
+
+    def format_dataframe(self, result):
+        st.dataframe(result["value"])
+        return
+
+    def format_plot(self, result):
+        st.image(result["value"])
+        return
+
+    def format_other(self, result):
+        st.write(result["value"])
+        return
+
+
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 
