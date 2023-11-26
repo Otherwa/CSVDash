@@ -54,7 +54,7 @@ def page_file(uploaded_file):
                 }
             )
             # ? Display the answer in Streamlit
-            st.success(ans["answer"] if not "None" else "Plot Shown")
+            st.success(ans["answer"] if not None else "Plot Shown")
             counter += 1
 
             # Button to push records to MongoDB
