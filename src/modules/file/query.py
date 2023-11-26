@@ -1,24 +1,14 @@
 import streamlit as st
 from dotenv import load_dotenv
 import os
-from pandasai import SmartDataframe, BaseCallback
+from pandasai import SmartDataframe
 from pandasai.llm.openai import OpenAI
 from pandasai.responses.response_parser import ResponseParser
-from transformers import pipeline
 import matplotlib
 
 matplotlib.use(backend="TkAgg")
 
 load_dotenv()
-
-
-class StreamlitCallback(BaseCallback):
-    def __init__(self, container) -> None:
-        """Initialize callback handler."""
-        self.container = container
-
-    def on_code(self, response: str):
-        self.container.code(response)
 
 
 class StreamlitResponse(ResponseParser):
